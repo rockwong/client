@@ -1,0 +1,12 @@
+{
+  "name": "client",
+  "private": true,
+  "dependencies": {
+    "clientjs": "^0.1.5",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0"
+  }
+}

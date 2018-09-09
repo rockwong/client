@@ -1,0 +1,22 @@
+//**
+// Responsive Styles
+//**
+
+//根据页面宽度调整字体大小
+$responsive-max: 50; //最大响应的基数  50*20=1000
+$responsive-min: 16; //最小响应的基数  16*20=320
+$responsive-step: 15; //每次设置的步长  20px
+@for $i from $responsive-max through 16 {
+  @media (max-width: $i*$responsive-step+px) {
+    html {
+      font-size: $i * $responsive-step * 1.25 / $width * 100%;
+    }
+  }
+  @if $i== $responsive-max {
+    @media (min-width: $i*$responsive-step+px) {
+      html {
+        font-size: $i * $responsive-step * 1.25 / $width * 100%;
+      }
+    }
+  }
+}
