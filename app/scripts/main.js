@@ -1,5 +1,5 @@
 const client = new ClientJS();
-$(function() {
+const showClientInfo = () => {
   const bodyEle = document.getElementsByTagName('body')[0];
   const bodyHeight = bodyEle.clientHeight;
   const bodyWith = bodyEle.clientWidth;
@@ -16,4 +16,8 @@ $(function() {
     key => `<li><span class="title">${key}</span><span class="txt">${clientObj[key]}</span></li>`
   );
   $('#slide0 ul').html(clientStr);
+};
+$(function() {
+  showClientInfo();
+  setInterval(showClientInfo, 2000);
 });
